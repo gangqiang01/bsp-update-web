@@ -1,0 +1,170 @@
+Date : 2021-07-16 16:05:30
+Directory : /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src
+Total : 110 files,  22280 codes, 459 comments, 1728 blanks, all 24467 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| Vue        |         66 |     18,081 |        194 |      1,228 |     19,503 |
+| JavaScript |         39 |      3,615 |        259 |        427 |      4,301 |
+| SCSS       |          4 |        575 |          4 |         69 |        648 |
+| CSS        |          1 |          9 |          2 |          4 |         15 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++---------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                    | files      | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                       |        110 |     22,280 |        459 |      1,728 |     24,467 |
+| assets                                                                                                  |         12 |      1,161 |         31 |        129 |      1,321 |
+| assets/css                                                                                              |          3 |        523 |          4 |         60 |        587 |
+| assets/js                                                                                               |          9 |        638 |         27 |         69 |        734 |
+| components                                                                                              |         79 |     19,131 |        194 |      1,348 |     20,673 |
+| components/account                                                                                      |          1 |        204 |         10 |         11 |        225 |
+| components/appmagr                                                                                      |          6 |      1,642 |         18 |        121 |      1,781 |
+| components/appmagr/cloudTab                                                                             |          2 |        564 |          9 |         68 |        641 |
+| components/bootAnimationmagr                                                                            |          6 |      1,567 |         12 |        118 |      1,697 |
+| components/bootAnimationmagr/cloudTab                                                                   |          2 |        547 |          8 |         72 |        627 |
+| components/bspmagr                                                                                      |          6 |      2,017 |         30 |        142 |      2,189 |
+| components/bspmagr/cloudTab                                                                             |          2 |        527 |          8 |         71 |        606 |
+| components/configuration                                                                                |          1 |        437 |          5 |         22 |        464 |
+| components/dockermagr                                                                                   |          5 |      1,350 |         24 |        117 |      1,491 |
+| components/dockermagr/cloudTab                                                                          |          2 |        590 |          9 |         72 |        671 |
+| components/filemagr                                                                                     |          6 |      1,696 |         13 |        125 |      1,834 |
+| components/filemagr/cloudTab                                                                            |          2 |        532 |          8 |         69 |        609 |
+| components/linuxPkgMagr                                                                                 |         11 |      3,212 |         17 |        204 |      3,433 |
+| components/linuxPkgMagr/cloudTab                                                                        |          2 |        574 |          8 |         74 |        656 |
+| components/main                                                                                         |          2 |        451 |          5 |         35 |        491 |
+| components/osCloud                                                                                      |          3 |        684 |          8 |         77 |        769 |
+| components/osCloud/cloudTab                                                                             |          2 |        564 |          8 |         69 |        641 |
+| components/repo                                                                                         |          2 |        340 |         14 |          9 |        363 |
+| components/restfulapi                                                                                   |         14 |      1,061 |          0 |        122 |      1,183 |
+| components/user                                                                                         |          1 |        328 |          2 |         20 |        350 |
+| components/windowsPkgMagr                                                                               |         11 |      3,233 |         17 |        205 |      3,455 |
+| components/windowsPkgMagr/cloudTab                                                                      |          2 |        591 |          8 |         72 |        671 |
+| lang                                                                                                    |          3 |        953 |         58 |         63 |      1,074 |
+| mock                                                                                                    |          2 |         19 |          0 |          3 |         22 |
+| models                                                                                                  |          2 |         42 |          0 |         11 |         53 |
+| plugins                                                                                                 |          1 |        501 |        162 |        112 |        775 |
+| router                                                                                                  |          2 |        310 |          5 |         22 |        337 |
+| style                                                                                                   |          2 |         61 |          2 |         13 |         76 |
+| vuex                                                                                                    |          5 |         53 |          1 |         14 |         68 |
++---------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++---------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                                                | language   | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/App.vue                                           | Vue        |         11 |          0 |          2 |         13 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/assets/css/base.scss                              | SCSS       |         16 |          0 |          3 |         19 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/assets/css/colors.scss                            | SCSS       |         19 |          1 |         11 |         31 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/assets/css/global.scss                            | SCSS       |        488 |          3 |         46 |        537 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/assets/js/baseApi.js                              | JavaScript |        160 |          2 |         12 |        174 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/assets/js/config.js                               | JavaScript |          9 |          2 |          5 |         16 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/assets/js/constant.js                             | JavaScript |         69 |         18 |          9 |         96 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/assets/js/cookie.js                               | JavaScript |         29 |          3 |          4 |         36 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/assets/js/filter.js                               | JavaScript |         75 |          0 |          5 |         80 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/assets/js/global.js                               | JavaScript |        112 |          1 |         14 |        127 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/assets/js/storage.js                              | JavaScript |         82 |          0 |          9 |         91 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/assets/js/swal.js                                 | JavaScript |         51 |          0 |          6 |         57 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/assets/js/utils.js                                | JavaScript |         51 |          1 |          5 |         57 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/Uploader.vue                           | Vue        |        291 |          0 |          1 |        292 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/UploaderMore.vue                       | Vue        |        291 |          0 |          1 |        292 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/account/login.vue                      | Vue        |        204 |         10 |         11 |        225 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/appmagr/add.vue                        | Vue        |        464 |          1 |         10 |        475 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/appmagr/addDialog.vue                  | Vue        |        181 |          6 |          8 |        195 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/appmagr/cloudList.vue                  | Vue        |         99 |          0 |          6 |        105 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/appmagr/cloudTab/history.vue           | Vue        |        319 |          3 |         42 |        364 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/appmagr/cloudTab/list.vue              | Vue        |        245 |          6 |         26 |        277 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/appmagr/list.vue                       | Vue        |        334 |          2 |         29 |        365 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/bootAnimationmagr/add.vue              | Vue        |        392 |          0 |          8 |        400 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/bootAnimationmagr/addDialog.vue        | Vue        |        206 |          2 |         10 |        218 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/bootAnimationmagr/cloudList.vue        | Vue        |        109 |          0 |          9 |        118 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/bootAnimationmagr/cloudTab/history.vue | Vue        |        313 |          3 |         45 |        361 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/bootAnimationmagr/cloudTab/list.vue    | Vue        |        234 |          5 |         27 |        266 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/bootAnimationmagr/list.vue             | Vue        |        313 |          2 |         19 |        334 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/bspmagr/add.vue                        | Vue        |        611 |          1 |         11 |        623 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/bspmagr/add_old.vue                    | Vue        |        429 |          7 |         32 |        468 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/bspmagr/cloudList.vue                  | Vue        |        109 |          0 |          9 |        118 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/bspmagr/cloudTab/history.vue           | Vue        |        303 |          3 |         42 |        348 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/bspmagr/cloudTab/list.vue              | Vue        |        224 |          5 |         29 |        258 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/bspmagr/list.vue                       | Vue        |        341 |         14 |         19 |        374 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/configuration/list.vue                 | Vue        |        437 |          5 |         22 |        464 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/dockermagr/addDialog.vue               | Vue        |        233 |         12 |         11 |        256 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/dockermagr/cloudList.vue               | Vue        |        100 |          0 |          5 |        105 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/dockermagr/cloudTab/history.vue        | Vue        |        319 |          3 |         40 |        362 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/dockermagr/cloudTab/list.vue           | Vue        |        271 |          6 |         32 |        309 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/dockermagr/list.vue                    | Vue        |        427 |          3 |         29 |        459 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/filemagr/add.vue                       | Vue        |        484 |          0 |         14 |        498 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/filemagr/addDialog.vue                 | Vue        |        248 |          3 |         12 |        263 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/filemagr/cloudList.vue                 | Vue        |        109 |          0 |          9 |        118 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/filemagr/cloudTab/history.vue          | Vue        |        313 |          3 |         45 |        361 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/filemagr/cloudTab/list.vue             | Vue        |        219 |          5 |         24 |        248 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/filemagr/list.vue                      | Vue        |        323 |          2 |         21 |        346 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/home.vue                               | Vue        |        312 |         19 |         17 |        348 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/linuxPkgMagr/cloudList.vue             | Vue        |        118 |          0 |          8 |        126 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/linuxPkgMagr/cloudTab/history.vue      | Vue        |        325 |          3 |         45 |        373 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/linuxPkgMagr/cloudTab/list.vue         | Vue        |        249 |          5 |         29 |        283 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/linuxPkgMagr/compress.vue              | Vue        |        332 |          2 |         25 |        359 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/linuxPkgMagr/compressAdd.vue           | Vue        |         54 |          0 |          6 |         60 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/linuxPkgMagr/compress_add.vue          | Vue        |        484 |          1 |         12 |        497 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/linuxPkgMagr/deb.vue                   | Vue        |        332 |          2 |         26 |        360 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/linuxPkgMagr/debAdd.vue                | Vue        |         54 |          0 |          6 |         60 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/linuxPkgMagr/deb_add.vue               | Vue        |        452 |          1 |          8 |        461 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/linuxPkgMagr/os.vue                    | Vue        |        341 |          2 |         18 |        361 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/linuxPkgMagr/osAdd.vue                 | Vue        |        471 |          1 |         21 |        493 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/main/footer.vue                        | Vue        |         28 |          0 |          5 |         33 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/main/header.vue                        | Vue        |        423 |          5 |         30 |        458 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/osCloud/cloudList.vue                  | Vue        |        120 |          0 |          8 |        128 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/osCloud/cloudTab/history.vue           | Vue        |        320 |          3 |         43 |        366 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/osCloud/cloudTab/list.vue              | Vue        |        244 |          5 |         26 |        275 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/refresh.vue                            | Vue        |         15 |          0 |          1 |         16 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/repo/addDialog.vue                     | Vue        |        146 |          0 |          5 |        151 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/repo/list.vue                          | Vue        |        194 |         14 |          4 |        212 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/restfulapi/appmagrApi.js               | JavaScript |         91 |          0 |         12 |        103 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/restfulapi/authApi.js                  | JavaScript |         17 |          0 |          3 |         20 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/restfulapi/bspmagrApi.js               | JavaScript |        171 |          0 |         16 |        187 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/restfulapi/cloudStatusApi.js           | JavaScript |         56 |          0 |          7 |         63 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/restfulapi/configApi.js                | JavaScript |         26 |          0 |          4 |         30 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/restfulapi/dockercomposeApi.js         | JavaScript |        132 |          0 |         14 |        146 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/restfulapi/exemagrApi.js               | JavaScript |         87 |          0 |         10 |         97 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/restfulapi/filemagrApi.js              | JavaScript |         96 |          0 |         10 |        106 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/restfulapi/handleResponse.js           | JavaScript |         30 |          0 |          2 |         32 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/restfulapi/linuxPkgApi.js              | JavaScript |         88 |          0 |          9 |         97 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/restfulapi/repoApi.js                  | JavaScript |         53 |          0 |          7 |         60 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/restfulapi/repoTypeApi.js              | JavaScript |         50 |          0 |          7 |         57 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/restfulapi/storageApi.js               | JavaScript |         44 |          0 |          6 |         50 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/restfulapi/userApi.js                  | JavaScript |        120 |          0 |         15 |        135 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/user/list.vue                          | Vue        |        328 |          2 |         20 |        350 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/windowsPkgMagr/cloudList.vue           | Vue        |        118 |          0 |          7 |        125 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/windowsPkgMagr/cloudTab/history.vue    | Vue        |        325 |          3 |         43 |        371 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/windowsPkgMagr/cloudTab/list.vue       | Vue        |        266 |          5 |         29 |        300 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/windowsPkgMagr/exe.vue                 | Vue        |        345 |          2 |         25 |        372 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/windowsPkgMagr/exeAdd.vue              | Vue        |         52 |          0 |          7 |         59 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/windowsPkgMagr/exe_add.vue             | Vue        |        461 |          1 |          8 |        470 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/windowsPkgMagr/os.vue                  | Vue        |        338 |          2 |         18 |        358 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/windowsPkgMagr/osAdd.vue               | Vue        |        472 |          1 |         20 |        493 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/windowsPkgMagr/zip.vue                 | Vue        |        333 |          2 |         27 |        362 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/windowsPkgMagr/zipAdd.vue              | Vue        |         52 |          0 |          8 |         60 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/components/windowsPkgMagr/zip_add.vue             | Vue        |        471 |          1 |         13 |        485 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/lang/en.js                                        | JavaScript |        461 |         29 |         25 |        515 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/lang/lang.js                                      | JavaScript |         34 |          0 |         14 |         48 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/lang/zh.js                                        | JavaScript |        458 |         29 |         24 |        511 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/main.js                                           | JavaScript |         38 |          6 |         11 |         55 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/mock/mock.js                                      | JavaScript |          7 |          0 |          2 |          9 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/mock/mockdata.js                                  | JavaScript |         12 |          0 |          1 |         13 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/models/file-md5.js                                | JavaScript |         31 |          0 |         10 |         41 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/models/file-url.js                                | JavaScript |         11 |          0 |          1 |         12 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/plugins/js-spark-md5.js                           | JavaScript |        501 |        162 |        112 |        775 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/router/index.js                                   | JavaScript |          7 |          0 |          4 |         11 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/router/route.js                                   | JavaScript |        303 |          5 |         18 |        326 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/style/global.css                                  | CSS        |          9 |          2 |          4 |         15 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/style/mixin.scss                                  | SCSS       |         52 |          0 |          9 |         61 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/vuex/actions.js                                   | JavaScript |         15 |          0 |          3 |         18 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/vuex/getters.js                                   | JavaScript |          3 |          1 |          2 |          6 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/vuex/mutations.js                                 | JavaScript |         15 |          0 |          4 |         19 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/vuex/state.js                                     | JavaScript |          7 |          0 |          2 |          9 |
+| /home/gangqiangsun/MYPROJECT/FRONTEND/aStore-edge/src/vuex/store.js                                     | JavaScript |         13 |          0 |          3 |         16 |
+| Total                                                                                                   |            |     22,280 |        459 |      1,728 |     24,467 |
++---------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
