@@ -2,29 +2,12 @@
     <div class="wrapper" >
         <home-header :isCollapse="isCollapse" @collapseAsideNavbar="collapse"></home-header>
         <div class="body">
-            <div class="menu">
-                <el-menu 
-                    :default-active="activeItem" 
-                    class="el-menu-vertical"  
-                    :unique-opened="isUnique"
-                    :collapse="isCollapse">
-                    <router-link to="/main/linuxOs/list">
-                        <el-menu-item index="linux-os">
-                            <i class="fa fa-microchip m-r-10 icon-left"></i>
-                            <span slot="title">{{$t("home.os")}}</span>
-                        </el-menu-item>
-                    </router-link>
-                </el-menu>
-            </div>
-            <div class="content">
                 <div  class="cf content-box">
                      <transition name="fade" mode="out-in">
                         <router-view></router-view>
                     </transition>
                 </div>
-            </div>
         </div> 
-        <!-- <home-footer></home-footer>   -->
     </div>
 
 </template>

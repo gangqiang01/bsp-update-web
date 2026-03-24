@@ -233,6 +233,8 @@ const upload = {
     bspFileInfo: "Please Select OS Package File",
     descriptionInfo: "Please write a appropriate description",
     emptyFileInfo: "File cannot be empty",
+    rebooting: "The system is restarting. Please wait ..",
+    updating: "The system is currently being updated, please wait .."
 }
 
 const overview = {

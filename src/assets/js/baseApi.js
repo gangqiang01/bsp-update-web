@@ -8,21 +8,17 @@ let cancelArr = [];
 axios.interceptors.request.use((config) => {
     // before send request
     if(config.method === "put"){
-            // send msg to exec device
-            config.timeout = 1000*30;
-        }else if(config.method === "post"){
-            if (config.isFileUpload) {
-                config.timeout = 0;
-            }else{
-                config.timeout = 1000*30;
-            }
+        // send msg to exec device
+        config.timeout = 1000*30;
+    }else if(config.method === "post"){
+        if (config.isFileUpload) {
+            config.timeout = 0;
         }else{
-            if(config.responseType === 'blob') {
-                config.timeout = 0; // 永久等待
-            } else {
-                config.timeout = 1000 * 30;
-            }
+            config.timeout = 1000*30;
         }
+    }else{
+        config.timeout = 1000 * 1;
+    }
     config.withCredentials = false;
     config.headers.Authorization = "Bearer "+cookie.getCookie("EIToken");
     config.cancelToken = new axios.CancelToken((cancel) => {

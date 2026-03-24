@@ -1,4 +1,4 @@
-import {apiGet, apiPost, apiPostfile, apiDelete} from "../../assets/js/baseApi";
+import {apiGet, apiPost, apiPostfile, apiDelete, apiPut} from "../../assets/js/baseApi";
 
 
 
@@ -7,7 +7,7 @@ let deleteBspApi = function(rbid){
         apiDelete('/v1/bsp/'+rbid).then((data) => {
             resolve(data)
         }).catch((error) => {
-            resolve(err.response)
+            resolve(error.response)
         })
     })
 } 
@@ -25,13 +25,34 @@ let getBspsByPageApi = function({keywords, currentPage, limit}){
         apiGet('/v1/bsp/byPage', data).then((data) => {
             resolve(data)
         }).catch((error) => {
-            resolve(err.response)
+            resolve(error.response)
         })
     })
 }
 
+let rebootApi = function(){
+    return new Promise((resolve, reject) => {
+        apiPost('/v1/system/reboot', data).then((data) => {
+            resolve(data)
+        }).catch((error) => {
+            resolve(error.response)
+        })
+    })
+}
+let getProcessApi = function(){
+    return new Promise((resolve, reject) => {
+        apiPost('/v1/system/process').then((data) => {
+            resolve(data)
+        }).catch((error) => {
+            resolve(error.response)
+        })
+    })
+}
 
 export {
     getBspsByPageApi,
-    deleteBspApi
+    deleteBspApi,
+    rebootApi,
+    getProcessApi
+
 }
