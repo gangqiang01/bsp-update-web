@@ -5,127 +5,116 @@
                 {{$t('home.os')}}
             </p>
         </div>
-        <div class="center">
-            <el-form
-            ref="file_form"
-            :model="file_form"
-            :rules="file_rules"
-            label-width="180px"
-            class="m-l-30"
-            >
-                <el-form-item :label="$t('label.selectBspPackage')">
-                    <div>
-                    <uploader
-                        browse_button="browse_button"
-                        :url="this.server_config+'/v1/upload/chunk'"
-                        chunk_size="5MB"
-                        :max_retries="3"
-                        :multi_selection="false"
-                        :filters="{prevent_duplicates:true}"
-                        :FilesAdded="filesAdded"
-                        :BeforeUpload="beforeUpload"
-                        @inputUploader="inputUploader"
-                        :Error="handleError"
-                    />
+        <div class="center"> 
+            <uploader
+                browse_button="browse_button"
+                :url="this.server_config+'/v1/upload/chunk'"
+                chunk_size="5MB"
+                :max_retries="3"
+                :multi_selection="false"
+                :filters="{prevent_duplicates:true}"
+                :FilesAdded="filesAdded"
+                :BeforeUpload="beforeUpload"
+                @inputUploader="inputUploader"
+                :Error="handleError"
+            />
 
-                    <div class="uploadBtn">
-                        <el-button
-                        size="mini"
-                        type="primary"
-                        id="browse_button"
-                        :disabled="tableDataChange()"
-                        class="m-r-10"
+            <div class="uploadBtn">
+                <el-button
+                size="mini"
+                type="primary"
+                id="browse_button"
+                :disabled="tableDataChange()"
+                class="m-r-10"
+                >
+                <i class="fa fa-cloud-upload m-r-5"></i>
+                {{$t('upload.uploadFile')}}
+                </el-button>
+                <!-- <span class="note">
+                    <i>{{$t('bspmagr.note')}}</i>
+                    {{$t('bspmagr.noteOsContent')}}
+                </span> -->
+            </div>
+            <br />
+            <el-table :data="tableData" style="width: 100%; margin: 10px 0;">
+                <el-table-column :label="$t('upload.fileName')">
+                    <template slot-scope="scope">
+                        <span>{{scope.row.name}}</span>
+                    </template>
+                </el-table-column>
+                <el-table-column :label="$t('upload.fileSize')">
+                    <template slot-scope="scope">
+                        <span>{{scope.row.size|size}}</span>
+                    </template>
+                </el-table-column>
+                <el-table-column label="MD5">
+                    <template slot-scope="scope">
+                        <span>{{scope.row.md5}}</span>
+                    </template>
+                </el-table-column>
+                <el-table-column :label="$t('upload.uploadStatus')">
+                    <template slot-scope="scope">
+                        <span v-if="scope.row.status === -1">{{$t('upload.calculated')}}</span>
+                        <span v-if="scope.row.status === 1" class="c-primary">{{$t('upload.completed')}}</span>
+                        <span v-if="scope.row.status === 4" class="c-danger">ERROR:{{scope.row.errormsg}}</span>
+                        <span
+                        v-if="scope.row.status === 5"
+                        class="c-success"
+                        >{{$t('upload.success')}}</span>
+                        <el-tooltip
+                        :content="$t('bspmagr.pkgSizeInfo')"
+                        placement="top"
+                        v-if="scope.row.status === 6"
                         >
-                        <i class="fa fa-cloud-upload m-r-5"></i>
-                        {{$t('upload.uploadFile')}}
-                        </el-button>
-                        <!-- <span class="note">
-                            <i>{{$t('bspmagr.note')}}</i>
-                            {{$t('bspmagr.noteOsContent')}}
-                        </span> -->
-                    </div>
-                    <br />
-                    <el-table :data="tableData" style="width: 80%; margin: 10px 0;">
-                        <el-table-column :label="$t('upload.fileName')">
-                            <template slot-scope="scope">
-                                <span>{{scope.row.name}}</span>
-                            </template>
-                        </el-table-column>
-                        <el-table-column :label="$t('upload.fileSize')">
-                            <template slot-scope="scope">
-                                <span>{{scope.row.size|size}}</span>
-                            </template>
-                        </el-table-column>
-                        <el-table-column label="MD5">
-                            <template slot-scope="scope">
-                                <span>{{scope.row.md5}}</span>
-                            </template>
-                        </el-table-column>
-                        <el-table-column :label="$t('upload.uploadStatus')">
-                            <template slot-scope="scope">
-                                <span v-if="scope.row.status === -1">{{$t('upload.calculated')}}</span>
-                                <span v-if="scope.row.status === 1" class="c-primary">{{$t('upload.completed')}}</span>
-                                <span v-if="scope.row.status === 4" class="c-danger">ERROR:{{scope.row.errormsg}}</span>
-                                <span
-                                v-if="scope.row.status === 5"
-                                class="c-success"
-                                >{{$t('upload.success')}}</span>
-                                <el-tooltip
-                                :content="$t('bspmagr.pkgSizeInfo')"
-                                placement="top"
-                                v-if="scope.row.status === 6"
-                                >
-                                <span class="c-danger">{{$t("upload.fileTooLarge")}}</span>
-                                </el-tooltip>
-                                <el-tooltip
-                                :content="$t('bspmagr.pkgInfo')"
-                                placement="top"
-                                v-if="scope.row.status === 7"
-                                >
-                                <span class="c-danger">{{$t("upload.formatError")}}</span>
-                                </el-tooltip>
-                            
-                                <el-progress
-                                v-if="scope.row.status === 2"
-                                :text-inside="true"
-                                :stroke-width="20"
-                                :percentage="scope.row.percent"
-                                ></el-progress>
-                            </template>
-                        </el-table-column>
-                        <el-table-column :label="$t('upload.action')">
-                            <template slot-scope="scope">
-                                <el-button
-                                size="small"
-                                type="danger"
-                                @click="deleteFile(scope.row.id)"
-                                >{{$t('upload.delete')}}</el-button>
-                            </template>
-                        </el-table-column>
-                    </el-table>
-                    <p>
-                        <span class="note">
-                            <i>{{$t('global.note')}}</i>
-                            {{$t('global.addNotLeaveInfo')}}
-                        </span>
-                    </p>
-                    </div>
-                    <br />
-                    <el-button size="small" @click="back()">{{$t('upload.back')}}</el-button>
-                    <el-button
+                        <span class="c-danger">{{$t("upload.fileTooLarge")}}</span>
+                        </el-tooltip>
+                        <el-tooltip
+                        :content="$t('bspmagr.pkgInfo')"
+                        placement="top"
+                        v-if="scope.row.status === 7"
+                        >
+                        <span class="c-danger">{{$t("upload.formatError")}}</span>
+                        </el-tooltip>
+                    
+                        <el-progress
+                        v-if="scope.row.status === 2"
+                        :text-inside="true"
+                        :stroke-width="20"
+                        :percentage="scope.row.percent"
+                        ></el-progress>
+                    </template>
+                </el-table-column>
+                <el-table-column :label="$t('upload.action')">
+                    <template slot-scope="scope">
+                        <el-button
                         size="small"
-                        type="primary"
-                        :disabled="submitBtnDisabled"
-                        @click="start()"
-                    >{{$t('global.submit')}}</el-button>
-                    <el-button
-                        size="small"
-                        type="success"
-                        :disabled="uploadBtnDisabled"
-                        @click="update()"
-                    >{{$t('global.update')}}</el-button>
-                </el-form-item>
-            </el-form>
+                        type="danger"
+                        @click="deleteFile(scope.row.id)"
+                        >{{$t('upload.delete')}}</el-button>
+                    </template>
+                </el-table-column>
+            </el-table>
+            <p>
+                <span class="note">
+                    <i>{{$t('global.note')}}</i>
+                    {{$t('global.addNotLeaveInfo')}}
+                </span>
+            </p>
+            <br />
+            <el-button size="small" @click="back()">{{$t('upload.back')}}</el-button>
+            <el-button
+                size="small"
+                type="primary"
+                :disabled="submitBtnDisabled"
+                @click="start()"
+            >{{$t('upload.upload')}}</el-button>
+            <el-button
+                size="small"
+                type="success"
+                :disabled="uploadBtnDisabled"
+                @click="update()"
+            >{{$t('global.updateSystem')}}</el-button>
+                
         </div>
         <el-dialog :visible.sync="dialogProcessVisible" :close-on-click-modal="false"  width="45%">
             <div class=content>
@@ -160,10 +149,11 @@
 $subContentColor: #606266;
 .bsp-box {
     position: relative; 
+    top: 20px;
 }
 .center {
     position: absolute;
-    width: 1200px;
+    width: 70%;
     top: 300px;
     left: 50%;
     transform: translate(-50%, -50%);

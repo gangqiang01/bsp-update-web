@@ -47,6 +47,8 @@ const global = {
     copy: "Copy",
     submit: "Submit",
     copyUrl: "Copy download link",
+
+    updateSystem: "Update System",
 }
 
 const home =  {
@@ -225,7 +227,7 @@ const upload = {
     fail: "Error: file existing or network exception",
     success: "Success",
     back: "Back",
-    uploadFile: "Upload File",
+    uploadFile: "Upload system update package",
     fileType: "Type",
     formatError: "Format Error",
     fileTooLarge: "File Too Large",

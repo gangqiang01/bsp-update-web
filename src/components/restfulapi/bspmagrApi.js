@@ -32,7 +32,7 @@ let getBspsByPageApi = function({keywords, currentPage, limit}){
 
 let rebootApi = function(){
     return new Promise((resolve, reject) => {
-        apiPost('/v1/system/reboot', data).then((data) => {
+        apiPost('/v1/system/reboot').then((data) => {
             resolve(data)
         }).catch((error) => {
             resolve(error.response)
@@ -41,7 +41,7 @@ let rebootApi = function(){
 }
 let getProcessApi = function(){
     return new Promise((resolve, reject) => {
-        apiPost('/v1/system/process').then((data) => {
+        apiGet('/v1/system/process').then((data) => {
             resolve(data)
         }).catch((error) => {
             resolve(error.response)

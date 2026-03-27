@@ -47,6 +47,7 @@ const global = {
     copy: "复制",
     submit: "提交",
     copyUrl: "复制下载链接",
+    updateSystem: "更新系统",
 }
 
 const home =  {
@@ -226,7 +227,7 @@ const upload = {
     fail: "文件已存在或网络异常",
     success: "已上传",
     back: "返回",
-    uploadFile: "上传文件",
+    uploadFile: "上传系统更新包",
     fileType: "类型",
     formatError: "格式错误",
     fileTooLarge: "文件太大",
