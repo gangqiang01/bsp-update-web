@@ -131,11 +131,9 @@
                                 cookie.setCookie("EIToken", res.data.accessToken, 60*8);
                                 cookie.setCookie("apphub_username", this.form.username, 60*9);
                                 cookie.setCookie("apphub_logintime", new Date().getTime(), 60*9);
-                                if(this.redirectUrl){
-                                    this.$router.replace(this.redirectUrl);
-                                }else{
-                                    this.$router.replace({name:'main'});
-                                }
+                 
+                                this.$router.replace({name:'os'});
+                                
 
                             }else{
                                 _g.handleError(res);

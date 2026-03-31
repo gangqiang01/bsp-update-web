@@ -101,7 +101,7 @@
                 </span>
             </p>
             <br />
-            <el-button size="small" @click="back()">{{$t('upload.back')}}</el-button>
+            <el-button size="small" @click="loginout()"> {{$t('header.loginOut')}}</el-button>
             <el-button
                 size="small"
                 type="primary"
@@ -164,9 +164,11 @@ $subContentColor: #606266;
 }
 .title {
     text-align: center;
-    font-weight: 800;
-    font-size: 24px;
     color:#004889;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 25px;
 }
 .bspInput {
   min-height: 40px;
@@ -247,6 +249,23 @@ export default {
         uploader: Uploader,
     },
     methods: {
+        loginout(){
+                let flag = false;
+                for (var i = 0; i < this.tableData.length; i++){
+                    if (this.tableData[i].status == 2) {
+                        flag = true;
+                        break;
+                    }
+                }
+                if (flag) {
+                    this.$message({
+                        message: this.$t('global.addNotLeaveInfo'),
+                        type: 'warning'
+                    });
+                    return;
+                }
+                this.$router.replace('/');
+            },
         handleError(up, errorInfo){
             let response = JSON.parse(errorInfo.response);
             if(response.status == "error"){
@@ -328,23 +347,7 @@ export default {
             this.up.start();
              
         },
-        back() {
-            let flag = false;
-            for (var i = 0; i < this.tableData.length; i++){
-                if (this.tableData[i].status == 2) {
-                    flag = true;
-                    break;
-                }
-            }
-            if (flag) {
-                this.$message({
-                    message: this.$t('global.addNotLeaveInfo'),
-                    type: 'warning'
-                });
-                return;
-            }
-            this.$router.push("/main/linuxOs/list");
-        },
+
         update(){
             rebootApi().then(res => {
                 handelResponse(res, (data) => {
