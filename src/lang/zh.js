@@ -222,6 +222,7 @@ const upload = {
     action: "操作",
     upload: "上传",
     delete: "删除",
+    calcuting: "正在计算...",
     calculated: "正在计算MD5",
     completed: "MD5计算完成，准备上传",
     fail: "文件已存在或网络异常",

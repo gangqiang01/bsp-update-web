@@ -1,6 +1,7 @@
 
 import swal from 'sweetalert'
 import self from "../../main"
+import router from '../../router'
 let handleResponse = function(res, cb, errcb){
     _g.closeGlobalLoading();
     if(res === undefined){

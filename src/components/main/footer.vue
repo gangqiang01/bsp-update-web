@@ -20,12 +20,11 @@
 </style>
 
 <script>
-    import {releaseDate, power, version} from "../../assets/js/constant"
+    import {releaseDate, version} from "../../assets/js/constant"
     export default{
         data(){
             return {
                 releaseDate,
-                power,
                 version
             }
         }

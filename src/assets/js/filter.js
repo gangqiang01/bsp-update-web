@@ -11,8 +11,6 @@ export default (function () {
         }
     })
 
-    
-
     Vue.filter("size", (value) =>{
         const num = Number(value);
         if(!isNaN(num)&&value>-1){
@@ -28,8 +26,8 @@ export default (function () {
         return "N/A";
     })
     Vue.filter("md5", (value) =>{
-        if(value){
-            return "Calculating..."
+        if(!value){
+            return self.$t('upload.calcuting');
         }
         return value;
     })

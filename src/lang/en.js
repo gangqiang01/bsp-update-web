@@ -222,6 +222,7 @@ const upload = {
     action: "Action",
     upload: "Upload",
     delete: "Delete",
+    calcuting: "Calculating ...",
     calculated: "MD5 is being calculated,please waiting",
     completed: "MD5 calculation completed,ready to upload",
     fail: "Error: file existing or network exception",

@@ -11,11 +11,11 @@ import Cookies from '../assets/js/cookie'
 
 export let i18n
 
-// let curLocale =Cookies.getCookie("link_lang")|| "en";
-// if(Cookies.getCookie("link_lang") == 'rb'){
-//     curLocale = 'zh'
-// }
-let curLocale ="en";
+let curLocale =Cookies.getCookie("link_lang")|| "en";
+if(Cookies.getCookie("link_lang") == 'rb'){
+    curLocale = 'zh'
+}
+// let curLocale ="en";
 const messages = {
     en: {
         ...EnLang,

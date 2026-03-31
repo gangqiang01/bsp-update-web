@@ -132,7 +132,7 @@
                                 cookie.setCookie("apphub_username", this.form.username, 60*9);
                                 cookie.setCookie("apphub_logintime", new Date().getTime(), 60*9);
                  
-                                this.$router.replace({name:'os'});
+                                this.$router.replace({name:'main'});
                                 
 
                             }else{

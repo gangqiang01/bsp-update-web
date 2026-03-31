@@ -1,10 +1,10 @@
 <template>
     <div class="bsp-box">
-        <div>
+        <!-- <div>
             <p class="title">
                 {{$t('home.os')}}
             </p>
-        </div>
+        </div> -->
         <div class="center"> 
             <uploader
                 browse_button="browse_button"
@@ -101,7 +101,6 @@
                 </span>
             </p>
             <br />
-            <el-button size="small" @click="loginout()"> {{$t('header.loginOut')}}</el-button>
             <el-button
                 size="small"
                 type="primary"
@@ -147,10 +146,10 @@
 <style lang='scss' scoped>
 @import "../../assets/css/colors";
 $subContentColor: #606266;
-.bsp-box {
-    position: relative; 
-    top: 20px;
-}
+// .bsp-box {
+//     position: relative; 
+//     top: 20px;
+// }
 .center {
     position: absolute;
     width: 70%;
@@ -209,7 +208,6 @@ $subContentColor: #606266;
 import handelResponse from "../restfulapi/handleResponse";
 import FileMd5 from "../../models/file-md5.js";
 import Uploader from "../Uploader";
-import { bspMaxLength, linuxOs, maxTagCount} from "../../assets/js/constant";
 import {uploadServerUrl} from "../../assets/js/config"
 import {rebootApi, getProcessApi, getIsUpdateApi} from "../restfulapi/bspmagrApi.js";
 
@@ -319,7 +317,6 @@ export default {
             up.setOption("multipart_params", {
                 size: file.size,
                 md5: file.md5,
-                os: linuxOs,
             });
         },
 
@@ -416,17 +413,6 @@ export default {
                         size: e.size,
                         md5: e.md5,
                         status: 7,
-                        id: e.id,
-                        percent: e.percent,
-                        errormsg: ""
-                        });
-                    }else if (e.size > bspMaxLength) {
-                        this.submitBtnDisabled = true;
-                        this.tableData.push({
-                        name: e.name,
-                        size: e.size,
-                        md5: e.md5,
-                        status: 6,
                         id: e.id,
                         percent: e.percent,
                         errormsg: ""

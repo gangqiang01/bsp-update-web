@@ -3,17 +3,17 @@ let childRoute = [
 
  
     {
-        path: 'linuxOs/list',
+        path: 'os/list',
         component: resolve => require(["@/components/linuxPkgMagr/os"], resolve),
-        name: 'linuxOs',
+        name: 'os',
         meta: {
-            menuName: 'linux-os'
+            menuName: 'os'
         }
     },
 
     {
         path: '*',
-        redirect:'linuxOs/list'
+        redirect:'os/list'
     }
 ]
 let route = [
@@ -23,10 +23,18 @@ let route = [
         name: 'login',
     },
     {
-        path: '/os',
-        name: 'os',
-        component: resolve => require(['@/components/linuxPkgMagr/os'], resolve)  
+        path: '/main',
+        name: 'main',
+        component: resolve => require(['@/components/home'], resolve),
+        
+        children: childRoute,
+        redirect:'/main/os/list'    
     },
+    // {
+    //     path: '/os',
+    //     name: 'os',
+    //     component: resolve => require(['@/components/linuxPkgMagr/os'], resolve)  
+    // },
     {
         path: '*',
         redirect:'/'

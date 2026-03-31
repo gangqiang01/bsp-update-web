@@ -3,9 +3,7 @@
 <div>
     <div class="nav-header">
         <ul class="nav-left pointer" >
-            <li @click="collapse()">
-                <i class="fa fa-bars collapseIcon pointer" aria-hidden="true" @click="collapseAsideNavbar()"></i> 
-            </li>
+
             <li>
                 <span  class="title">
                     {{productname}}
@@ -22,12 +20,13 @@
                         </el-tooltip>
                     </span>
                     <el-dropdown-menu slot="dropdown">
-                        <el-dropdown-item class="text-center" command="zh">
-                            <p class="pointer">简体中文</p>
-                        </el-dropdown-item>
                         <el-dropdown-item class="text-center" command="en">
                             <p class="pointer">English</p>
                         </el-dropdown-item>
+                        <el-dropdown-item class="text-center" command="zh">
+                            <p class="pointer">简体中文</p>
+                        </el-dropdown-item>
+                        
                     </el-dropdown-menu>
                 </el-dropdown>  
             </li>
@@ -114,11 +113,11 @@
                     position: relative;
                     top:-1px;
                 }
-                &:nth-child(1){
-                    margin-right: 0;
-                    width: 16px;
-                    height: 16px;
-                }
+                // &:nth-child(1){
+                //     margin-right: 0;
+                //     width: 16px;
+                //     height: 16px;
+                // }
                 color:#89898A;  
                 .title {
                     margin-left: 10px;
