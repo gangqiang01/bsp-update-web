@@ -27,6 +27,12 @@ export default (function () {
         }
         return "N/A";
     })
+    Vue.filter("md5", (value) =>{
+        if(value){
+            return "Calculating..."
+        }
+        return value;
+    })
 
     Vue.filter("none", (value) =>{
         if(value == null || value == ''){

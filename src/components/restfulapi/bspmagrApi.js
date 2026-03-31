@@ -49,10 +49,21 @@ let getProcessApi = function(){
     })
 }
 
+let getIsUpdateApi = function(){
+    return new Promise((resolve, reject) => {
+        apiGet('/v1/system/isUpdate').then((data) => {
+            resolve(data)
+        }).catch((error) => {
+            resolve(error.response)
+        })
+    })
+}
+
 export {
     getBspsByPageApi,
     deleteBspApi,
     rebootApi,
-    getProcessApi
+    getProcessApi,
+    getIsUpdateApi
 
 }

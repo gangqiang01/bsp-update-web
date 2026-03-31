@@ -49,7 +49,7 @@
                 </el-table-column>
                 <el-table-column label="MD5">
                     <template slot-scope="scope">
-                        <span>{{scope.row.md5}}</span>
+                        <span>{{scope.row.md5|md5}}</span>
                     </template>
                 </el-table-column>
                 <el-table-column :label="$t('upload.uploadStatus')">
@@ -211,7 +211,7 @@ import FileMd5 from "../../models/file-md5.js";
 import Uploader from "../Uploader";
 import { bspMaxLength, linuxOs, maxTagCount} from "../../assets/js/constant";
 import {uploadServerUrl} from "../../assets/js/config"
-import {rebootApi, getProcessApi} from "../restfulapi/bspmagrApi.js";
+import {rebootApi, getProcessApi, getIsUpdateApi} from "../restfulapi/bspmagrApi.js";
 
 
 export default {
@@ -243,6 +243,7 @@ export default {
             },
             dialogVisible: false,
             process: 0,
+            interval: null
         };
     },
     components: {
@@ -353,7 +354,8 @@ export default {
                 handelResponse(res, (data) => {
                     if(data.code == 200){
                         this.dialogProcessVisible = true;
-                        interval = setInterval(() => {
+                        clearInterval(this.interval);
+                        this.interval = setInterval(() => {
                             this.getProcess();
                         }, 1000);
                     }
@@ -366,8 +368,28 @@ export default {
                     if(data.code == 200){
                         this.isWaiting = false;
                         this.process = data.data;
+                        if(this.process == 100){
+                            this.$swal("", this.$t('global.success'), "success", {button: this.$t('global.confirm')})
+                        }
+                    }else if(data.code == 500){
+                        
                     }else{
                         this.isWaiting = true;
+                    }
+                });
+            })
+        },
+        getIsUpdate(){
+            getIsUpdateApi().then(res => {
+                handelResponse(res, (data) => {
+                    if(data.code == 200){
+                        if(data.data == true){
+                            this.dialogProcessVisible = true;
+                            clearInterval(this.interval);
+                            this.interval = setInterval(() => {
+                                this.getProcess();
+                            }, 1000);
+                        }
                     }
                 });
             })
@@ -443,7 +465,7 @@ export default {
        
     },
     created() {
-        // this.getAllRepos();
+        this.getIsUpdate();
     }
 };
 </script>
