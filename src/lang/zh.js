@@ -237,7 +237,8 @@ const upload = {
     descriptionInfo: "请输入正确的描述",
     emptyFileInfo: "文件不能为空",
     rebooting: "系统重启中,请稍后...",
-    updating: "系统正在更新,请稍后..."
+    updating: "系统正在更新,请稍后...",
+    updateSuccess: "更新成功,系统正在重启，请稍后...",
 }
 
 const overview = {

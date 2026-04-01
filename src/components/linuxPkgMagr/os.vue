@@ -157,9 +157,13 @@ $subContentColor: #606266;
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 .process, .waiting {
     text-align: center;
     font-size: 18px;
+    .updateing{
+        margin-bottom: 10px;
+    }
 }
 .title {
     text-align: center;
@@ -241,7 +245,8 @@ export default {
             },
             dialogVisible: false,
             process: 0,
-            interval: null
+            interval: null,
+            isFinished: false
         };
     },
     components: {
@@ -352,9 +357,13 @@ export default {
                     if(data.code == 200){
                         this.dialogProcessVisible = true;
                         clearInterval(this.interval);
+                        this.isWaiting = true;
+                        this.process = 0;
                         this.interval = setInterval(() => {
                             this.getProcess();
                         }, 1000);
+                    }else{
+                        _g.handleError(res);
                     }
                 });
             })
@@ -366,7 +375,19 @@ export default {
                         this.isWaiting = false;
                         this.process = data.data;
                         if(this.process == 100){
-                            this.$swal("", this.$t('global.success'), "success", {button: this.$t('global.confirm')})
+                            this.dialogProcessVisible = false;
+                            this.tableData = [];
+                            this.submitBtnDisabled = false;
+                            this.uploadBtnDisabled = true;
+                            if(!this.isFinished){
+                                this.isFinished = true;
+                                this.$message({
+                                    message: this.$t("upload.updateSuccess"),
+                                    duration: 5000,
+                                    type: 'success'
+                                });
+                            }
+                            
                         }
                     }else if(data.code == 500){
                         
