@@ -228,7 +228,7 @@ const upload = {
     fail: "Error: file existing or network exception",
     success: "Success",
     back: "Back",
-    uploadFile: "Upload System Package",
+    selectFile: "Select System Package",
     fileType: "Type",
     formatError: "Format Error",
     fileTooLarge: "File Too Large",
@@ -237,7 +237,8 @@ const upload = {
     descriptionInfo: "Please write a appropriate description",
     emptyFileInfo: "File cannot be empty",
     rebooting: "The system is restarting. Please wait ..",
-    updating: "The system is currently being updated, please wait .."
+    updating: "The system is currently being updated, please wait ..",
+    updateSuccess: "Update success, the system is restarting. Please wait ..",
 }
 
 const overview = {

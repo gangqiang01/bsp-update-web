@@ -228,7 +228,7 @@ const upload = {
     fail: "文件已存在或网络异常",
     success: "已上传",
     back: "返回",
-    uploadFile: "上传系统更新包",
+    selectFile: "选择系统更新包",
     fileType: "类型",
     formatError: "格式错误",
     fileTooLarge: "文件太大",
@@ -237,7 +237,8 @@ const upload = {
     descriptionInfo: "请输入正确的描述",
     emptyFileInfo: "文件不能为空",
     rebooting: "系统重启中,请稍后...",
-    updating: "系统正在更新,请稍后..."
+    updating: "系统正在更新,请稍后...",
+    updateSuccess: "更新成功,系统正在重启，请稍后...",
 }
 
 const overview = {
