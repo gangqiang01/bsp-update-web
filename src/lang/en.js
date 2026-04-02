@@ -228,7 +228,7 @@ const upload = {
     fail: "Error: file existing or network exception",
     success: "Success",
     back: "Back",
-    uploadFile: "Upload System Package",
+    selectFile: "Select System Package",
     fileType: "Type",
     formatError: "Format Error",
     fileTooLarge: "File Too Large",

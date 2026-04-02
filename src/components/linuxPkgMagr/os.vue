@@ -28,7 +28,7 @@
                 class="m-r-10"
                 >
                 <i class="fa fa-cloud-upload m-r-5"></i>
-                {{$t('upload.uploadFile')}}
+                {{$t('upload.selectFile')}}
                 </el-button>
                 <!-- <span class="note">
                     <i>{{$t('bspmagr.note')}}</i>
@@ -227,7 +227,7 @@ export default {
         };
         return {
             server_config: uploadServerUrl,
-            submitBtnDisabled: false,
+            submitBtnDisabled: true,
             uploadBtnDisabled: true,
             dialogProcessVisible: false,
             isWaiting: true,
