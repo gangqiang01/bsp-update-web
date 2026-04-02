@@ -386,7 +386,8 @@ export default {
                                 this.isFinished = true;
                                 this.$message({
                                     message: this.$t("upload.updateSuccess"),
-                                    duration: 5000,
+                                    showClose: true,
+                                    duration: 0,
                                     type: 'success'
                                 });
                             }

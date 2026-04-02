@@ -65,7 +65,7 @@
                         <el-dropdown-item>
                             <span class="pointer config-item">
                                 <i class="fa fa-exclamation-circle m-r-5 icon-left"></i>
-                                {{version}}
+                                {{version}} © {{releaseDate}}
                             </span>
                         </el-dropdown-item>
                     </el-dropdown-menu>
