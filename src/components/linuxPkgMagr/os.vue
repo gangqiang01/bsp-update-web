@@ -10,7 +10,8 @@
                 browse_button="browse_button"
                 :url="this.server_config+'/v1/upload/chunk'"
                 chunk_size="5MB"
-                :max_retries="3"
+                :max_connections="6"
+                :max_retries="5"
                 :multi_selection="false"
                 :filters="{prevent_duplicates:true}"
                 :FilesAdded="filesAdded"
@@ -314,9 +315,11 @@ export default {
             this.uploadBtnDisabled = true;
         },
         beforeUpload(up, file) {
+            let fileId = new Date().getTime();
             up.setOption("multipart_params", {
                 size: file.size,
                 md5: file.md5,
+                fileId: fileId,
             });
         },
 

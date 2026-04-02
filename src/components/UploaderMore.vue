@@ -85,6 +85,12 @@ export default {
         return "plupload/js/Moxie.xap";
       }
     },
+    max_connections: {
+      type: Number,
+      default() {
+        return 1;
+      }
+    },
     Init: {
       type: Function
     },
@@ -261,6 +267,7 @@ export default {
         file_data_name: this.file_data_name,
         flash_swf_url: this.flash_swf_url,
         silverlight_xap_url: this.silverlight_xap_url,
+        max_connections: this.max_connections,
         preinit: preInitMethod,
         init: initMethod
       };
